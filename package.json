@@ -1,0 +1,22 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/start.js",
+    "dev": "nodemon src/start.js",
+    "test": "tap --no-coverage  --no-esm"
+  },
+  "dependencies": {
+    "fastify": "^3.0.0-rc.1"
+  },
+  "devDependencies": {
+    "tap": "^14.10.2",
+    "nodemon": "^2.0.1"
+  },
+  "keywords": [],
+  "eslintConfig": {
+    "sourceType": "script"
+  }
+}
