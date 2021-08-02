@@ -34,7 +34,6 @@ inspect:
 
 clean:
 	@echo "Clean project ${PROJECT}..."
-	npm run clean
 	rm -rf ./node_modules
 
 nvm:
@@ -43,10 +42,5 @@ nvm:
 
 help: 
 	@echo "install: Install ${PROJECT}"
-	@echo "production: Start production ${PROJECT}"
-	@echo "stop-production: Stop production ${PROJECT}"
-	@echo "staging: Start staging ${PROJECT}"
-	@echo "stop-staging: Start staging ${PROJECT}"
-	@echo "dev: Start dev ${PROJECT}"
 	@echo "clean: Clean ${PROJECT}"
 	@echo "nvm: NVM install${PROJECT}"
