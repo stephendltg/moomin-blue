@@ -24,8 +24,8 @@ tap.test("server routes", async t => {
     // Fastify comes with built-in support for fake http injection thanks to light-my-request
     const res = await server.inject({ method: "GET", url: "/" });
 
-    t.strictEqual(res.statusCode, 200);
-    t.strictEqual(
+    t.equal(res.statusCode, 200);
+    t.equal(
       res.headers["content-type"],
       "application/json; charset=utf-8"
     );
@@ -41,12 +41,12 @@ tap.test("server routes", async t => {
       query: { name: "fastify" }
     });
 
-    t.strictEqual(res.statusCode, 200);
-    t.strictEqual(
+    t.equal(res.statusCode, 200);
+    t.equal(
       res.headers["content-type"],
       "application/json; charset=utf-8"
     );
-    t.deepEqual(JSON.parse(res.payload), { hello: "fastify" });
+    t.same(JSON.parse(res.payload), { hello: "fastify" });
   });
 
   t.test("/hello", async t => {
@@ -57,11 +57,11 @@ tap.test("server routes", async t => {
       url: "/hello"
     });
 
-    t.strictEqual(res.statusCode, 200);
-    t.strictEqual(
+    t.equal(res.statusCode, 200);
+    t.equal(
       res.headers["content-type"],
       "application/json; charset=utf-8"
     );
-    t.deepEqual(JSON.parse(res.payload), { hello: "no name!" });
+    t.same(JSON.parse(res.payload), { hello: "no name!" });
   });
 });

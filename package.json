@@ -2,18 +2,24 @@
   "name": "api-rest",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "src/start.js",
   "scripts": {
-    "start": "node src/start.js",
-    "dev": "nodemon src/start.js",
-    "test": "tap --no-coverage  --no-esm"
+    "start": "node ./src/www",
+    "dev": "nodemon ./src/www",
+    "test": "tap",
+    "lint": "eslint ./"
   },
   "dependencies": {
-    "fastify": "^3.0.0-rc.1"
+    "eslint": "^7.32.0",
+    "fastify": "^3.20.0",
+    "fastify-cookie": "^5.3.1",
+    "fastify-cors": "^6.0.2",
+    "fastify-csrf": "^3.1.0",
+    "fastify-swagger": "^4.8.3"
   },
   "devDependencies": {
-    "tap": "^14.10.2",
-    "nodemon": "^2.0.1"
+    "tap": "^15.0.9",
+    "nodemon": "^2.0.12"
   },
   "keywords": [],
   "eslintConfig": {
